@@ -16,12 +16,12 @@ function FormEdit(){
         setNewValue(value);
     }
 
-function handleClickUpdateTodo(e){
-    e.preventeDefault();
-    onUpdate(item,newValue);
+    function handleClickUpdateTodo(){
+    onUpdate(item.id,newValue);
     setIsEdit(false);
 
 }
+ 
 return (
     <form className="todoUpdateForm" onSubmit={handleSubmit}>
         <input 
@@ -37,8 +37,7 @@ return (
 function TodoElement(){
 return (
 <div className='todoInfo'>
-    {item.tittle} <button onClick={()=>setIsEdit(true)}>Edit</button>
-    <button>Delete</button>
+    {item.tittle} <button onClick={()=>setIsEdit(true)}>Edit</button>    <button>Delete</button>
 </div>
 )
 };

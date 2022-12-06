@@ -4,7 +4,7 @@ import Todo from './todo';
 export function TodoApp()
 {
 
-const [tittle, setTitle]= useState("hola");
+const [tittle, setTitle]= useState(" ");
 const [todos , setTodos]= useState([]);
 
 function handleChange(e){
@@ -13,19 +13,32 @@ setTitle(value);
 }
 
 function handleSubmit(e){
-e.preventDefault();
-const  newTodo= {
- id: crypto.randomUUID(),
- tittle: tittle,
+e.preventDefault(); 
+const  newTodo= {               /*se crea */
+ id: crypto.randomUUID(),       /*un nuevo*/
+ tittle: tittle,                /*objeto todo*/
  completed: false,
 };
 
-const temp=[...todos]
-setTodos([...todos,newTodo]);
-temp.unshift(newTodo);
-setTodos(temp);
-{/*esto se resume con setTodos([...todos,newTods])*/}
 
+const temp=[...todos]           /*se crea una copia del array todo*/
+temp.unshift(newTodo);          /*unshift agrega el nuevo objeto al inicio del arrgelo*/
+setTodos(temp);                 /*se actuliza el estado todo con el setter(setTodos) con el temp actualizado */
+{ /*esto se resume con setTodos([...todos,newTods])*/}
+
+}
+
+function handleUpdate(id,value){   /* esta funcion busca el item por su Id y le actualiza con value del input */
+const temp =[...todos];
+const item =temp.find(item=>item.id === id)
+item.title = value;
+setTodos(temp);
+
+}
+
+function handleDelete(id){
+const temp = todos.filter(item => item,id !== id);
+setTodos(temp)
 }
 
  return(
@@ -40,7 +53,7 @@ setTodos(temp);
   </form>
 
   <div className= "todosContainer"> 
-  { todos.map(item=>( <Todo item={item}/> ))}
+  { todos.map(item=>( <Todo item={item} onUpdate={handleUpdate} onDelete={handleDelete}/> ))}
   </div>
 
 </div>
