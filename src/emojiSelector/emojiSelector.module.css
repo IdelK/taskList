@@ -1,0 +1,53 @@
+.button1{
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+margin: 2px;
+background-color: #2e518b; /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+border-color: rgb(0, 55, 255);
+
+}
+
+.button2{
+border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+margin: 2px;
+background-color: #2e518b; /*color botón*/
+color: #ffffff; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+border-color: rgb(255, 0, 51);
+
+
+}
+
+.input{
+    border-color: blue;
+    width: 130px;
+    border-width: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 3px;
+    border-radius: 5px;
+
+}
+
+.container{
+    border-color: rgb(255, 0, 17);
+    width: 130px;
+    border-width: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 3px;
+    border-radius: 5px;}
+
+    .emojiPickerInput{
+
+        padding: 10%;
+    }

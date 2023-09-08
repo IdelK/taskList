@@ -14,7 +14,7 @@
             "program": "${workspaceFolder}\\node_modules\\react-dom\\cjs\\react-dom.development.js"
         },
         {
-            "type": "chrome",
+            "type":"chrome",
             "name": "http://localhost:3000/",
             "request": "launch",
             "url": "http://localhost:3000/"
