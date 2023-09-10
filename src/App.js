@@ -1,24 +1,18 @@
-import TodoApp from "./todoApp/todoApp";
-import WeatherApp from "./weatherApp/weatherApp";
-import EmojiPickerApp from "./emojiSelector/EmojiPickerApp";
-import './App.css';
-
+import RoutesApp from "./components/routesApp";
+import "./App.css";
+import {
+  Routes /*En React-router-dom V6 es Routes en vez de Switch */,
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 
 export function App() {
   return (
-    <div className="App-header" >
-      <div>
-        <WeatherApp />
-      </div>
-
-      <div>
-        <TodoApp />
-      </div>
-
-      <div>
-        <EmojiPickerApp />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route  path='/' element={<RoutesApp />} />
+      </Routes>
+    </Router>
   );
 }
 
