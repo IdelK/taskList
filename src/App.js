@@ -1,31 +1,26 @@
-//import TodoApp from './todoApp/todoApp';
-import WeatherApp from './weatherApp/weatherApp';
-//import EmojiPickerApp from './emojiSelector/EmojiPickerApp';
+import TodoApp from "./todoApp/todoApp";
+import WeatherApp from "./weatherApp/weatherApp";
+import EmojiPickerApp from "./emojiSelector/EmojiPickerApp";
+import './App.css';
 
 
-export function App() { 
-	return (
- <WeatherApp/>
-//<TodoApp/>
-//<EmojiPickerApp/>		
-	);
+export function App() {
+  return (
+    <div className="App-header" >
+      <div>
+        <WeatherApp />
+      </div>
+
+      <div>
+        <TodoApp />
+      </div>
+
+      <div>
+        <EmojiPickerApp />
+      </div>
+    </div>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 // import BSIndex from './bookStore/Index';
@@ -33,9 +28,9 @@ export function App() {
 // import View from './bookStore/view';
 // import Store from './bookStore/store';
 
-// export function App() { 
+// export function App() {
 // 	return (
-// 		<Store> 
+// 		<Store>
 // 			<Router>
 // 				<Routes>
 // 					<Route

@@ -3,7 +3,6 @@ import WeatherForm from './weatherForm';
 import WeatherMainInfo from './weatherMainInfo';
 import styles from './weatherApp.module.css';
    
-/*http://localhost:3000/ */
 
 export default function WeatherApp(){
 const  [weather, setWeather] = useState(null);
